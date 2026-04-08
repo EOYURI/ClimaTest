@@ -11,8 +11,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 app.get('/sobre', (req, res) => {
-    res.sendFile(path.join(__dirname, '/sobre.html'));
+    res.sendFile(path.join(__dirname, '/pages/sobre.html'));
 });
+app.get('/contato', (req, res) => {
+    res.sendFile(path.join(__dirname, '/pages/contato.html'))
+})
 
 app.use((req, res) => {
     res.status(404).send("404 - Pagina não encontrada");
